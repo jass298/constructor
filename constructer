@@ -1,0 +1,96 @@
+<script>
+
+class RailWayForm {
+
+constructor (givenName,givenage ,givenadd,giventrainNo) {// constructer will call forever
+console.log("constructer called..." + givenName + " " + givenage)
+this.name = givenName
+this.age = givenage
+this.address =givenadd
+this.trainNo = giventrainNo
+} 
+
+preview(){
+    alert("preview....," + this.name +" your form is for train number: " + this.trainNo)
+}
+submit(){
+        console.log( this.name + this.age + "form submitted,the address is" +this.address)
+    }
+    cancel(){
+        alert("this form is canceled")
+        this.trainNo = 0
+    }
+}
+let jassForm = new RailWayForm("jass" ,"13356", "punjab" )
+jassForm.preview() 
+jassForm.submit()
+jassForm.cancel()
+jassForm.preview()
+
+
+</script>
+
+
+
+
+  // 2nd way
+
+
+
+<script>
+//classes and object
+
+class RailWayForm {
+
+    //2md way to write data here ,bcz it will call all time
+    constructor (givenName,givenage) {// constructer will call forever
+console.log("constructer called..." + givenName + " " + givenage)
+this.name = givenName
+this.age = givenage
+} 
+
+
+
+    submit(){
+        console.log( this.name + this.age + "form submitted")
+    }
+    cancel(){
+        alert("this form is canceled")
+    }
+    fillagain(){//we can make and fill object accordind to own choice
+        alert("please check the form and fill again")
+    }
+
+    //1st way 
+
+
+    // fill(givenName,givenage){
+
+    //     this.name = givenName//print name
+    //     this.age = givenage //will  print given age
+
+    //     alert(this.name +  " the age of " + this.age + "has filled the form")
+    // }
+}
+
+
+
+console.log(RailWayForm)
+//will create form for both person and others
+let harry = new RailWayForm("harry","21")///2nd way
+let rohan = new RailWayForm("rohan" ,"31")
+
+ 
+harry.submit()
+rohan.submit()///for subbmiting 
+rohan.cancel()//can cancel the form
+harry.fillagain()
+// harry.fill("harry","21") //1st way
+
+console.log(harry)
+console.log(rohan)
+
+</script>
+
+
+  
