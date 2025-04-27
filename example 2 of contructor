@@ -1,0 +1,35 @@
+<script>
+    class Employee {
+        login() {
+            console.log("employee has logged in.");
+        }
+        logout() {
+            console.log("employee has logged out.");
+        }
+        requestLeaves(leaves) {
+            console.log(`employee has requested ${leaves}leaves`);
+        }
+    }
+
+    class programmer extends Employee {
+        requestcofffe(x) {
+            console.log(` employee has requested ${x} coffees`);
+        }
+        requestLeaves(leaves) {
+            // console.log(`employee has requested ${leaves + 1}(one extra)leaves`);....one way otherwise👇we can use super()that we not need copy the  whole code 
+            super.requestLeaves(4) 
+            console.log('one extra is granted')
+        }
+    }
+    let e = new programmer()
+    e.login()
+    e.logout()
+    e.requestLeaves()
+    //e.requestcofffe()//....will throw error if emplyee class ,if progrrammer will run the code 
+
+
+
+
+
+
+</script>
