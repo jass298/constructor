@@ -1,5 +1,10 @@
+
 <script>
     class Employee {
+        constructor(name){
+            console.log(name + " constructor is here.")//this will run autmatically.
+            this.name =  name
+        }
         login() {
             console.log("employee has logged in.");
         }
@@ -12,6 +17,10 @@
     }
 
     class programmer extends Employee {
+        constructor(name){
+            super(name) //must use super here
+            console.log("this is programmer's constructor.")
+        }
         requestcofffe(x) {
             console.log(` employee has requested ${x} coffees`);
         }
@@ -21,7 +30,7 @@
             console.log('one extra is granted')
         }
     }
-    let e = new programmer()
+    let e = new programmer("jass")
     e.login()
     e.logout()
     e.requestLeaves()
